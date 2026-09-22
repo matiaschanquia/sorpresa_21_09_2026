@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorpresa 🌼</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================================
+       PANTALLA 1 - SORPRESA
+       ================================ -->
+  <section class="screen active" id="screen-1">
+    <div class="flowers-decoration">🌼 🌼 🌼</div>
+
+    <div class="envelope">💌</div>
+
+    <h1>Tengo una entrega para vos.</h1>
+    <p>Y esta vez no tuve que pedirle nada a un delivery...</p>
+
+    <button class="main-button" onclick="nextScreen()">
+      Abrir sorpresa
+    </button>
+  </section>
+
+
+  <!-- ================================
+     PANTALLA 2 - FLORES
+     ================================ -->
+<section class="screen" id="screen-2">
+
+  <div class="flower-garden">
+
+    <!-- Flores que aparecen con animación -->
+    <div class="flower flower-1">🌼</div>
+    <div class="flower flower-2">🌼</div>
+    <div class="flower flower-3">🌼</div>
+    <div class="flower flower-4">🌼</div>
+
+    <!-- Flor central -->
+    <div class="growing-flower">
+      <div class="stem"></div>
+
+      <div class="flower-head">
+        <span>🌼</span>
+      </div>
+    </div>
+
+  </div>
+
+  <h1>Para que hoy tengas tus flores.</h1>
+
+  <p>
+    Porque el 21 de septiembre no podían faltar...
+  </p>
+
+  <button class="main-button" onclick="nextScreen()">
+    Seguir 🌼
+  </button>
+
+</section>
+
+
+  <!-- ================================
+       PANTALLA 3 - MÚSICA
+       ================================ -->
+  <section class="screen" id="screen-3">
+
+    <div class="music-card">
+
+      <div class="album-art">
+        🌼
+      </div>
+
+      <div class="song-info">
+        <span class="small-label">PARA VOS</span>
+        <h2>Flores Amarillas</h2>
+        <p>Floricienta</p>
+      </div>
+
+      <!--
+        AUDIO REAL:
+        Colocá tu archivo "musica.mp3" dentro de esta misma carpeta.
+        El reproductor detectará automáticamente cuánto dura.
+      -->
+      <audio id="audio" src="musica.mp3" preload="metadata"></audio>
+
+      <div class="player">
+
+        <button class="play-button" id="play-button" onclick="toggleMusic()">
+          ▶
+        </button>
+
+        <div class="progress-container">
+          <div class="progress" id="progress">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+
+          <div class="time">
+            <span id="elapsed">0:00</span>
+            <span>♡</span>
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <p class="music-hint">
+      Tocá ▶ para escucharla 🌼
+    </p>
+
+    <button class="main-button" onclick="nextScreen()">
+      Y hay algo más...
+    </button>
+  </section>
+
+
+  <!-- ================================
+     PANTALLA 4 - MENSAJE FINAL
+     ================================ -->
+<section class="screen" id="screen-4">
+
+  <div class="photo-frame">
+
+    <!--
+      FOTO:
+      Poné una foto llamada "nosotros.jpeg"
+      dentro de esta misma carpeta.
+    -->
+    <img
+      src="nosotros.jpeg"
+      alt="Una foto nuestra"
+    >
+
+  </div>
+
+  <!-- NOMBRE -->
+  <h2 class="her-name">
+    Para <span>Jazmin</span>.
+  </h2>
+
+  <!-- MENSAJE -->
+  <p class="final-message">
+    Porque aunque no pueda meter un ramo dentro de esta pantalla,
+    quería que hoy también recibieras tus flores amarillas. 🌼
+  </p>
+
+
+  <!-- =================================
+     JARDÍN DE FLORES
+     ================================= -->
+
+<!-- =================================
+     JARDÍN DE FLORES
+     ================================= -->
+
+<div class="flower-garden-final" id="flower-garden-final">
+
+  <!-- Flores iniciales -->
+  <div class="css-flower initial-flower" style="left: 15%;">
+    <div class="flower-head">
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+    </div>
+
+    <div class="stem"></div>
+    <div class="leaf"></div>
+  </div>
+
+  <div class="css-flower initial-flower" style="left: 35%;">
+    <div class="flower-head">
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+    </div>
+
+    <div class="stem"></div>
+    <div class="leaf"></div>
+  </div>
+
+  <div class="css-flower initial-flower" style="left: 55%;">
+    <div class="flower-head">
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+    </div>
+
+    <div class="stem"></div>
+    <div class="leaf"></div>
+  </div>
+
+  <div class="css-flower initial-flower" style="left: 75%;">
+    <div class="flower-head">
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+    </div>
+
+    <div class="stem"></div>
+    <div class="leaf"></div>
+  </div>
+
+</div>
+
+
+<button class="flower-button" onclick="addFlowers()">
+  Quiero más flores 🌼
+</button>
+
+
+<!-- BOTÓN VOLVER -->
+
+<button class="back-button" onclick="previousScreen()">
+  ← Volver
+</button>
+
+
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>
